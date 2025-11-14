@@ -32,6 +32,16 @@
 
     <!-- Sección Inicio: Galería de Productos Destacados -->
     <section id="inicio">
+        <!-- Modal Carrito -->
+<div id="carrito-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h3>Carrito</h3>
+        <div id="carrito-items"></div>
+        <p>Total: $<span id="total">0</span></p>
+        <button onclick="checkout()">Finalizar Compra</button>
+    </div>
+</div>
         <h2>Productos Destacados</h2>
         <div class="productos-destacados">
             <div class="producto">
