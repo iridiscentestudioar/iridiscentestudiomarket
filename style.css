@@ -1,13 +1,14 @@
-/* Importar fuente Loede (sube Loede.ttf al repo) */
+/* Importar fuente Loede */
 @font-face {
     font-family: 'Loede';
-    src: url('LoedeDEMO-Medium.ttf') format('truetype');  /* Cambia aquí: usa el nombre exacto del archivo */
+    src: url('LoedeDEMO-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/* Si no carga, usa esta alternativa */
-body { font-family: 'LoedeDEMO-Medium.ttf', serif; background: linear-gradient(to right, #f0f0f0, #e0e0e0); color: #333; margin: 0; padding: 0; }
+/* Aplicar fuente a TODO el sitio */
+body { font-family: 'Loede', 'Playfair Display', serif; background: linear-gradient(to right, #f0f0f0, #e0e0e0); color: #333; margin: 0; padding: 0; }
+header h1 { font-family: 'Loede', 'Playfair Display', serif; }  /* ¡Agregado: para el nombre de la marca! */
 header { background: #000; color: #fff; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
 nav ul { list-style: none; display: flex; }
 nav a { color: #fff; margin: 0 1rem; text-decoration: none; }
@@ -16,7 +17,7 @@ nav a { color: #fff; margin: 0 1rem; text-decoration: none; }
 .productos-destacados, .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem; }
 .producto { border: 1px solid #ccc; padding: 1rem; text-align: center; background: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 .producto img { width: 100%; height: auto; border-radius: 5px; }
-.producto h3 { font-family: 'Loede', serif; color: #000; }
+.producto h3 { font-family: 'Loede', 'Playfair Display', serif; color: #000; }
 .producto p { font-size: 0.9rem; }
 .producto select, .producto button { margin: 0.5rem; padding: 0.5rem; background: #000; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
 .producto button:hover { background: #333; }
