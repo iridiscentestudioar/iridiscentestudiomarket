@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iridiscente Studio - Atención al Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Iridiscente Studio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="atencion.html">Atención al Cliente</a></li>
+                <li><a href="referencias.html">Referencias</a></li>
+                <li><a href="terminos.html">Términos y Condiciones</a></li>
+            </ul>
+        </nav>
+        <div id="carrito-icon">🛒 <span id="carrito-count">0</span></div>
+    </header>
+    <a href="https://wa.me/5491173716270" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="WhatsApp">
+    </a>
+    <section>
+        <h2>Atención al Cliente</h2>
+        <p>Si realizaste una compra, recibirás un email con código de compra y seguimiento. Comunícate al WhatsApp: +54 9 11 7371-6270 o email: iridiscentestudio.ar@gmail.com.</p>
+        <button onclick="mostrarReclamo()">Hacer Reclamo</button>
+        <div id="reclamo-form" style="display:none;">
+            <form onsubmit="enviarReclamo(event)">
+                <input type="text" placeholder="Número de compra" required>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="text" placeholder="DNI/CUIL/CUIT" required>
+                <input type="tel" placeholder="Celular" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Describe el problema" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
