@@ -3,104 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iridiscente Studio - Tienda de Belleza</title>
-    <meta name="description" content="Tienda virtual de productos de belleza: skincare, maquillaje, uñas, pestañas y más. Envío gratis en puntos de entrega.">
+    <title>Iridiscente Studio - Inicio</title>
+    <meta name="description" content="Tienda virtual de productos de belleza: skincare, maquillaje, uñas, pestañas y más.">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"> <!-- Alternativa a Loede si no carga -->
 </head>
 <body>
     <!-- Logo Flotante WhatsApp -->
-    <a href="https://wa.me/5491173716270" class="whatsapp-float" target="_blank">💬 WhatsApp</a>
+    <a href="https://wa.me/5491173716270" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="WhatsApp">
+    </a>
 
     <!-- Header con Menú -->
     <header>
         <h1>Iridiscente Studio</h1>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#atencion">Atención al Cliente</a></li>
-                <li><a href="#referencias">Referencias</a></li>
-                <li><a href="#terminos">Términos y Condiciones</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="atencion.html">Atención al Cliente</a></li>
+                <li><a href="referencias.html">Referencias</a></li>
+                <li><a href="terminos.html">Términos y Condiciones</a></li>
             </ul>
         </nav>
         <div id="carrito-icon">🛒 <span id="carrito-count">0</span></div>
     </header>
 
-    <!-- Sección Inicio -->
+    <!-- Sección Inicio: Galería de Productos Destacados -->
     <section id="inicio">
-        <h2>Inicio</h2>
-        <div class="resumen">
-            <div class="catalogo-preview">Últimos en Catálogo: Mascarillas nuevas, ofertas en serums.</div>
-            <div class="nosotros-preview">Nosotros: Hacerte sentir única con atención especializada.</div>
-            <div class="atencion-preview">Atención: Contactanos por WhatsApp o email.</div>
-            <div class="referencias-preview">Referencias: Opiniones de clientas satisfechas.</div>
+        <h2>Productos Destacados</h2>
+        <div class="productos-destacados">
+            <div class="producto">
+                <img src="https://via.placeholder.com/300x300?text=Mascarilla+de+Coco" alt="Mascarilla de Coco">
+                <h3>Mascarilla de Coco</h3>
+                <p>Descripción: Hidratante natural para piel seca. Variantes: 50ml, 100ml.</p>
+                <p>Precio: $500</p>
+                <select>
+                    <option>Seleccionar variante</option>
+                    <option>50ml</option>
+                    <option>100ml</option>
+                </select>
+                <button onclick="agregarCarrito('mascarilla-coco')">Agregar al Carrito</button>
+            </div>
+            <!-- Agrega más productos destacados aquí -->
+            <div class="producto">
+                <img src="https://via.placeholder.com/300x300?text=Serum+Vitamina+C" alt="Serum Vitamina C">
+                <h3>Serum Vitamina C</h3>
+                <p>Descripción: Iluminador y antioxidante. Variantes: Con SPF, Sin SPF.</p>
+                <p>Precio: $800</p>
+                <select>
+                    <option>Seleccionar variante</option>
+                    <option>Con SPF</option>
+                    <option>Sin SPF</option>
+                </select>
+                <button onclick="agregarCarrito('serum-vitc')">Agregar al Carrito</button>
+            </div>
         </div>
     </section>
-
-    <!-- Sección Catálogo -->
-    <section id="catalogo">
-        <h2>Catálogo</h2>
-        <div class="subcategorias">
-            <button onclick="mostrarSub('nuevo')">NUEVO!!</button>
-            <button onclick="mostrarSub('skincare')">Skincare</button>
-            <!-- Agrega botones para otros subapartados -->
-        </div>
-        <div id="productos" class="productos-grid">
-            <!-- Productos se cargan dinámicamente con JS -->
-        </div>
-    </section>
-
-    <!-- Sección Nosotros -->
-    <section id="nosotros">
-        <h2>Nosotros</h2>
-        <p>Nuestra filosofía como marca es hacer sentir a cada uno de nuestros clientes únicos. Brindamos atención especializada para que reciban sus productos en las mejores condiciones y disfruten de Iridiscente como nosotros de ellos. Es un placer ser parte de esos regalos que hacen a los demás o a sí mismos, y nos encanta hacerlos brillar.</p>
-    </section>
-
-    <!-- Sección Atención al Cliente -->
-    <section id="atencion">
-        <h2>Atención al Cliente</h2>
-        <p>Si realizaste una compra, recibirás un email con código de compra y seguimiento. Comunícate al WhatsApp: +54 9 11 7371-6270 o email: iridiscentestudio.ar@gmail.com.</p>
-        <button onclick="mostrarReclamo()">Hacer Reclamo</button>
-        <div id="reclamo-form" style="display:none;">
-            <form onsubmit="enviarReclamo(event)">
-                <input type="text" placeholder="Número de compra" required>
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="text" placeholder="DNI/CUIL/CUIT" required>
-                <input type="tel" placeholder="Celular" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Describe el problema" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Sección Referencias -->
-    <section id="referencias">
-        <h2>Referencias</h2>
-        <div class="reseñas">
-            <p>"¡Me encantó el serum! Lo recomiendo." - Cliente A (5⭐)</p>
-            <!-- Agrega más reseñas -->
-        </div>
-        <p>Deja tu reseña en el email de seguimiento.</p>
-    </section>
-
-    <!-- Sección Términos y Condiciones -->
-    <section id="terminos">
-        <h2>Términos y Condiciones</h2>
-        <p>[Inserta todo el texto que proporcionaste, adaptado a HTML para legibilidad.]</p>
-    </section>
-
-    <!-- Modal Carrito -->
-    <div id="carrito-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Carrito</h3>
-            <div id="carrito-items"></div>
-            <p>Total: $<span id="total">0</span></p>
-            <button onclick="checkout()">Finalizar Compra</button>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
