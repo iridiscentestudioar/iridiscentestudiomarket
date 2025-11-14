@@ -78,6 +78,30 @@ function agregarCarrito(id) {
 function actualizarCarrito() {
     document.getElementById('carrito-count').textContent = carrito.length;
 }
+function abrirModal() {
+    document.getElementById('carrito-modal').style.display = 'block';
+    mostrarCarrito();
+}
+function cerrarModal() {
+    document.getElementById('carrito-modal').style.display = 'none';
+}
+function mostrarCarrito() {
+    const itemsDiv = document.getElementById('carrito-items');
+    itemsDiv.innerHTML = '';
+    let total = 0;
+    carrito.forEach(id => {
+        const prod = Object.values(productosData).flat().find(p => p.id === id);
+        if (prod) {
+            itemsDiv.innerHTML += `<p>${prod.nombre} - $${prod.precio}</p>`;
+            total += prod.precio;
+        }
+    });
+    document.getElementById('total').textContent = total;
+}
+function checkout() {
+    alert('Redirigiendo a pagos... (Integra MercadoPago aquí)');
+    // Aquí integra MercadoPago o WhatsApp para envío
+}
 
 // Inicializar
 actualizarCarrito();
