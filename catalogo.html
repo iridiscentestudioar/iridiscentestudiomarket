@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iridiscente Studio - Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Copia el header y WhatsApp de index.html aquí -->
+    <header>
+        <h1>Iridiscente Studio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <!-- Resto de enlaces -->
+            </ul>
+        </nav>
+        <div id="carrito-icon">🛒 <span id="carrito-count">0</span></div>
+    </header>
+    <a href="https://wa.me/5491173716270" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="WhatsApp">
+    </a>
+
+    <section id="catalogo">
+        <h2>Catálogo</h2>
+        <div class="subcategorias">
+            <button onclick="mostrarSub('nuevo')">NUEVO!!</button>
+            <button onclick="mostrarSub('skincare')">Skincare</button>
+            <!-- Agrega botones para otros -->
+        </div>
+        <div id="productos" class="productos-grid">
+            <!-- Productos cargados dinámicamente -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
