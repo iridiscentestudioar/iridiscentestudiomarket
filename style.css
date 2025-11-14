@@ -1,12 +1,22 @@
-body { font-family: Arial, sans-serif; background: linear-gradient(to right, #f0f0f0, #e0e0e0); color: #333; margin: 0; padding: 0; }
+/* Importar fuente Loede (sube Loede.ttf al repo) */
+@font-face {
+    font-family: 'Loede';
+    src: url('Loede.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Si no carga, usa esta alternativa */
+body { font-family: 'Playfair Display', serif; background: linear-gradient(to right, #f0f0f0, #e0e0e0); color: #333; margin: 0; padding: 0; }
 header { background: #000; color: #fff; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
 nav ul { list-style: none; display: flex; }
 nav a { color: #fff; margin: 0 1rem; text-decoration: none; }
-.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; padding: 10px; border-radius: 50%; text-decoration: none; }
-section { padding: 2rem; max-width: 1200px; margin: auto; }
-.productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-.producto { border: 1px solid #ccc; padding: 1rem; text-align: center; background: #fff; }
-.producto.agotado { opacity: 0.5; filter: grayscale(100%); }
-.modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); }
-.modal-content { background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; }
-.close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+.whatsapp-float img { width: 30px; height: 30px; }
+.productos-destacados, .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem; }
+.producto { border: 1px solid #ccc; padding: 1rem; text-align: center; background: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.producto img { width: 100%; height: auto; border-radius: 5px; }
+.producto h3 { font-family: 'Loede', serif; color: #000; }
+.producto p { font-size: 0.9rem; }
+.producto select, .producto button { margin: 0.5rem; padding: 0.5rem; background: #000; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+.producto button:hover { background: #333; }
