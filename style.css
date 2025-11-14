@@ -1,7 +1,7 @@
 /* Importar fuente Loede (sube Loede.ttf al repo) */
 @font-face {
     font-family: 'Loede';
-    src: url('Loede.ttf') format('truetype');
+    src: url('LoedeDEMO-Medium.ttf') format('truetype');  /* Cambia aquí: usa el nombre exacto del archivo */
     font-weight: normal;
     font-style: normal;
 }
