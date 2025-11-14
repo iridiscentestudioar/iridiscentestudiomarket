@@ -67,3 +67,5 @@ function interesado() {
 
 // Inicializar
 mostrarSub('nuevo');
+// Inicializar contador del carrito en cada página
+actualizarCarrito();
